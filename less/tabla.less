@@ -1,0 +1,34 @@
+.tabla-deporte{
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: @texto-primario;
+        text-align: center;
+    }
+    .table{
+        margin: 0 10px 30px 10px;
+        .row{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            &:first-child{
+                .col{
+                    font-weight: bold;
+                    background-color: @primary-background-color;
+                    color: @primary-text-color;
+                }
+            }
+            .col{
+                border: 2px solid black;
+                width: 100%;
+                padding: 0 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

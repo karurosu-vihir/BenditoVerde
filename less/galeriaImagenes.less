@@ -1,0 +1,30 @@
+.galeria{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: @texto-primario;
+        text-align: center;
+    }
+    .imagenes{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,500px));
+        justify-content: center;
+        .galeriaitem{
+            border-radius: 12px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            figcaption{
+                font-size: 1rem;
+                color: @secondary-text-color;
+                padding: 10px 0;
+                background-color: @secondary-background-color;
+                text-align: center;
+            }
+        }
+    }
+}
