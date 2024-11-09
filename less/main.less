@@ -2,6 +2,7 @@
 
 @header-verde-oscuro: #9aa387;
 @header-verde-claro: #A9B58B;
+@header-verde-claro-dark: darken(#A9B58B,10%);
 @primary-text-color: #111111;
 @secondary-text-color: #fff;
 
@@ -20,12 +21,14 @@
     ultrawide: xxl-;
 };
 
+@import 'header.less';
 @import 'footer.less';
 
 * {
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
+    margin: 0;
 }
 
 body {

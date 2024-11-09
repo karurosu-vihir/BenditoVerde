@@ -1,0 +1,109 @@
+header{
+    background-color: @header-verde-oscuro;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;    
+    .logo{
+        display: flex;
+        flex-flow: nowrap row;
+        .logo_circular{
+            display: none;
+            width: 84px;
+            height: 62px;
+            @media (min-width: @breakResolutions[desktop]) {
+                display: block;   
+            }
+        }
+        .logo_titulo{
+            width: 102px;
+            height: 86px;
+        }
+    }
+    .content{
+        label img{
+            width: 62px;
+            height: 62px;
+            @media (min-width: @breakResolutions[tablet]) {
+                display: none;       
+            }
+        }
+        input[type="checkbox"]{
+            display: none;
+            &:checked ~ ul{
+                display: flex;
+            }
+            @media (min-width: @breakResolutions[tablet]) {
+                display: none;       
+            }
+        }
+        ul{
+            display: none;
+            flex-flow: column;
+            background-color: @header-verde-claro;
+            position: absolute;
+            top: 110px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+            height: min-content;
+            @media (min-width: @breakResolutions[tablet]) {
+                display: flex;
+                position: unset;
+                flex-direction: row;
+                border-radius: 30px;
+            }
+            li{
+                padding: 20px 10px;
+                border-bottom: 2px solid @primary-text-color;
+                transition: .5s ease-in-out;
+                &:hover{
+                    background-color: @header-verde-claro-dark;
+                }
+                @media (min-width: @breakResolutions[tablet]) {
+                    border: 0;
+                }
+                a{
+                    font-size: 20px;
+                    color: @primary-text-color;
+                    text-decoration: none;
+                    font-weight: bold;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 25px;
+                    }
+                }
+                .active{
+                    color: @secondary-text-color;
+                }
+            }
+        }
+    }
+    
+    button{
+        display: none;
+        padding: 8px;
+        border-radius: 10px;
+        @media (min-width: @breakResolutions[tablet]) {
+            display: flex;
+            flex-flow: nowrap row;
+            align-items: center;
+            gap: 10px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        p{
+            @media (min-width: @breakResolutions[tablet]) {
+                display: none;
+            }
+            @media (min-width: @breakResolutions[desktop]) {
+                display: block;  
+                font-size: 25px;
+                font-weight: 500; 
+            }
+        }
+    }
+}

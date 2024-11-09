@@ -1,20 +1,18 @@
 <header>
-    <div class="container">
-        <section class="branding">
-            <img src="https://picsum.photos/id/20/32/32" alt="Logo" class="logo">
-            <h1>Succulent Miracle Spray</h1>
-        </section>
-        <nav>
-            <ul>
-                {{#each nav}}
-                    <li><a href="%BASE_URL%{{uri}}">{{label}}</a></li>
-                {{/each}}
-            </ul>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <div class="logo">
+        <img src="../img/logo.svg" alt="logo" class="logo_circular">
+        <img src="../img/titulo-big.svg" alt="Bendito Verde" class="logo_titulo">
     </div>
+    <div class="content">
+        <label for="hamburger"><img src="../img/menu_hamburguesa.png" alt="hamburguesa"></label>
+        <input type="checkbox" id="hamburger">
+        <ul>
+            <li><a href="" class="active">Inicio</a></li>
+            <li><a href="" class="">Menu</a></li>
+            <li><a href="" class="">Testimonios</a></li>
+            <li><a href="" class="">Nosotros</a></li>
+            <li><a href="" class="">Enviar</a></li>
+        </ul>
+    </div>
+    <button><img src="../img/send.svg" alt="Enviar"><p>Envía</p></button>
 </header>
