@@ -1,10 +1,42 @@
 <footer>
-    <div class="container">
-        <p>© 2023 Succulent Miracle Spray. All rights reserved.</p>
-        <ul class="social">
-            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i>X (Twitter)</a></li>
-        </ul>
-    </div>
+    <section>
+        <div class="somos">
+            <div>
+                <h2>QUIENES SOMOS</h2>
+                <input type="checkbox" id="check" class="somos_chk" onchange="document.querySelector('.somos').classList.toggle('active', this.checked)">
+                <label class="footer-dropdown" for="check"></label>
+            </div>
+            <ul class="somos_content">
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Horarios</a></li>
+                <li><a href="">Ubicación</a></li>
+            </ul>    
+        </div>
+        <div class="nosotros">
+            <div>
+                <h2>ACERCA DE NOSOTROS</h2>
+                <input type="checkbox" id="check1" onchange="document.querySelector('.nosotros').classList.toggle('active', this.checked)">
+                <label class="footer-dropdown" for="check1"></label>
+            </div>
+            <ul class="nosotros_content">
+                <li><a href="">Testimonios</a></li>
+                <li><a href="">Contáctanos</a></li>
+                <li><a href="">Nuestro Equipo</a></li>
+            </ul>
+        </div>
+        <div class="redes_sociales">
+            <div>
+                <h2>REDES SOCIALES</h2>
+                <input type="checkbox" id="check2" onchange="document.querySelector('.redes_sociales').classList.toggle('active', this.checked)">
+                <label class="footer-dropdown" for="check2"></label>
+            </div>
+            <ul class="redes_sociales_content">
+                <li><a href=""><img src="../img/facebook.svg" alt="facebook"></a></li>
+                <li><a href=""><img src="../img/instagram.svg" alt="instagram"></a></li>
+                <li><a href=""><img src="../img/whatsapp.svg" alt="whatsapp"></a></li>
+            </ul>
+        </div>
+    </section>
+    <h2>© 2024 Bendito Verde HN</h2>
 </footer>
+

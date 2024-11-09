@@ -1,17 +1,13 @@
-@primary-background-color: #943a3a;
-@primary-background-color-dark: darken(@primary-background-color, 20%);
-@primary-text-color: #fff;
-@secondary-background-color: #ffd59B;
-@secondary-background-color-dark: darken(@secondary-background-color, 20%);
-@secondary-text-color: #333;
-@default-padding: 1rem;
-@default-margin: 1rem;
-@no-margin: 0px;
-@default-gap: 0.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@header-verde-oscuro: #9aa387;
+@header-verde-claro: #A9B58B;
+@primary-text-color: #111111;
+@secondary-text-color: #fff;
 
 @breakResolutions: {
     tablet: 720px;
-    desktop: 1025px;
+    desktop: 1024px;
     widescreen: 1300px;
     ultrawide: 2000px;
 };
@@ -22,31 +18,14 @@
     desktop: lg-;
     widescreen: xl-;
     ultrawide: xxl-;
-}
-
-.default_button {
-    text-decoration: none;
-    padding:0.8rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: @primary-background-color;
-    color:@primary-text-color;
-    box-shadow: 1px 1px 3px @primary-background-color-dark;
 };
 
-@import 'header.less';
-@import 'hero.less';
-@import 'components.less';
-@import 'testimonio.less';
-@import 'galeriaImagenes.less';
-@import 'grid.less';
-@import 'tabla.less';
 @import 'footer.less';
 
 * {
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -54,7 +33,14 @@ body {
     padding: 0px;
 }
 
-main .container {
-    padding:1rem;
+main{
+    background: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul{
+    list-style: none;
 }
 

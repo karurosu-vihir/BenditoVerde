@@ -1,26 +1,197 @@
-footer {
-    background-color: @primary-background-color;
-    color:@primary-text-color;
-    .container{
-        display:flex;
-        justify-content: space-between;
-        max-width: @breakResolutions[widescreen];
-        align-items: flex-start;
-        margin:0px auto;
-        ul{
-            list-style: none;
-            margin:0px;
-            padding:0px;
+footer{
+    background-color: @header-verde-oscuro;
+    display: flex;
+    flex-flow: nowrap column;
+    padding: 20px;
+    section{
+        display: flex;
+        flex-flow: nowrap column;
+        @media (min-width: @breakResolutions[tablet]) {
+            flex-direction: row;  
+            justify-content: space-around; 
+            gap: 20px;    
+        }
+        .somos{
             display: flex;
-            flex-direction: column;
-            li {
-                a {
-                    text-decoration: none;
-                    color:@primary-text-color;
-                    display: inline-block;
-                    padding:0.5rem 0.8rem
+            flex-flow: nowrap column;        
+            .somos_chk:checked ~ .footer-dropdown + .somos_content {
+                display: block;
+            }
+            div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                h2{
+                    font-size: 21px;
+                    text-align: left;
+                    margin: 10px 0;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 28px;    
+                    }
+                }
+                input[type="checkbox"] {
+                    display: none;
+                    &:checked + label::after{
+                        content: "v";
+                    }
+                }
+                label{
+                    align-self: center;
+                    font-size: 21px;
+                    color: @secondary-text-color;
+                    &::after{
+                        content: '>';
+                    }
+                    @media (min-width: @breakResolutions[tablet]) {
+                        display: none;       
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 10px;
+                margin: 10px 0;
+                padding: 0;
+                display: none;
+                @media (min-width: @breakResolutions[tablet]) {
+                    display: flex;       
+                }
+                li a{
+                    font-size: 15px;
+                    color: @secondary-text-color;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 20px;    
+                    }
+                }
+            }
+        }
+        .nosotros{
+            display: flex;
+            flex-flow: nowrap column;
+            div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                h2{
+                    font-size: 21px;
+                    text-align: left;
+                    margin: 10px 0;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 28px;    
+                    }
+                }
+                input[type="checkbox"] {
+                    display: none;
+                    &:checked + label::after{
+                        content: "v";
+                    }
+                }
+                label{
+                    align-self: center;
+                    font-size: 21px;
+                    color: @secondary-text-color;
+                    &::after{
+                        content: '>';
+                    }
+                    @media (min-width: @breakResolutions[tablet]) {
+                        display: none;       
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 10px;
+                margin: 10px 0;
+                padding: 0;
+                display: none;
+                @media (min-width: @breakResolutions[tablet]) {
+                    display: flex;       
+                }
+                li a{
+                    font-size: 15px;
+                    color: @secondary-text-color;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 20px;    
+                    }
+                }
+            }
+        }
+        .redes_sociales{
+            div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                h2{
+                    font-size: 21px;
+                    text-align: left;
+                    margin: 10px 0;
+                    @media (min-width: @breakResolutions[desktop]) {
+                        font-size: 28px;    
+                    }
+                }
+                input[type="checkbox"] {
+                    display: none;
+                    &:checked + label::after{
+                        content: "v";
+                    }
+                }
+                label{
+                    align-self: center;
+                    font-size: 21px;
+                    color: @secondary-text-color;
+                    &::after{
+                        content: '>';
+                    }
+                    @media (min-width: @breakResolutions[tablet]) {
+                        display: none;       
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 10px;
+                margin: 10px 0;
+                padding: 0;
+                display: none;
+                @media (min-width: @breakResolutions[tablet]) {
+                    display: flex;       
+                }
+                @media (min-width: @breakResolutions[desktop]) {
+                    gap: 50px;    
+                }
+                li a img{
+                    width: 43px;
+                    height: 43px;
                 }
             }
         }
     }
+    h2{
+        color: @secondary-text-color;
+        font-size: 18px;
+        letter-spacing: 0em; 
+        text-align: right;
+        margin: 5px 0;
+        @media (min-width: @breakResolutions[tablet]) {
+            text-align: center;    
+        }
+        @media (min-width: @breakResolutions[desktop]) {
+            font-size: 30px;    
+        }
+    }
 }
+
+.somos.active .somos_content {
+    display: flex;
+}
+.nosotros.active .nosotros_content {
+    display: flex;
+}
+.redes_sociales.active .redes_sociales_content {
+    display: flex;
+}
+
+

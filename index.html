@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="less/main.less" type="text/css">
 </head>
 <body>
-   {{>header}}
-
     <main>
-       {{>hero}}
         <section class="benefits">
             <section class="grid">
             <div class="row">
@@ -61,25 +58,9 @@
                 <h2>Ready to Transform Your Succulents?</h2>
                 <a href="#" class="button">Shop Now</a>
             </div>
-        </section>
-        <section class="testimonios">
-            <h2>Testimonios</h2>
-                {{#each testimonios}}
-                    {{>testimonio
-                        testimonio = .
-                    }}
-                {{/each}}
-          </section>
-          <section class="galeria">
-                <h2>Galeria de Imagenes</h2>
-                {{> galeriaImagenes}}
-          </section>
-          <section class="tabla-deporte">
-                <h2>Tabla de Deportes</h2>
-                {{>tabla}}
-                </div>
-          </section>                  
+        </section>                  
     </main>
     {{>footer}}
+    <script src="main.js" type="module"></script>
 </body>
 </html>
