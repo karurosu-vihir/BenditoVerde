@@ -1,22 +1,35 @@
 import navData from "./global/nav";
-import { getProductData } from "./productos/producto1";
+import { changeActive } from "./global/nav";
 
 export const generarContextoDePagina = (page)=>{
-    const contextObject = {
-        ...navData,
-    };
+    let contextObject = {};
     let pageObject = {}
     switch(page){
-        case '/gallery.html':
-            pageObject = getGalleryData();
+        case '/pages/menu/productosunicos.html':
+        case '/pages/menu.html':
+            pageObject = {};
+            changeActive('Menu',navData)
+            contextObject = {...navData};
             break;
         case '/index.html':
+            pageObject = {};
+            changeActive('Inicio',navData)
+            contextObject = {...navData};
             break;
-        case '/productos/producto1.html':
-            pageObject = getProductData();
+        case '/pages/nosotros.html':
+            pageObject = {};
+            changeActive('Nosotros',navData)
+            contextObject = {...navData};
+            break;
+        case '/pages/contactanos.html':
+            pageObject = {};
+            changeActive('Enviar',navData)
+            contextObject = {...navData};
             break;
         default:
             pageObject = {};
+            changeActive('',navData)
+            contextObject = {...navData};
     }
     return {
         ...contextObject,
