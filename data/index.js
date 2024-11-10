@@ -5,6 +5,7 @@ export const generarContextoDePagina = (page)=>{
     let contextObject = {};
     let pageObject = {}
     switch(page){
+        case '/pages/menu/productosunicos.html':
         case '/pages/menu.html':
             pageObject = {};
             changeActive('Menu',navData)
